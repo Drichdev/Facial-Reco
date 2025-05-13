@@ -3,7 +3,7 @@
 ## Description
 This project compares an uploaded image with a live webcam feed in real-time to determine if the faces match. The application uses AI-powered facial recognition to calculate a similarity score and displays a detection box around the face.
 
-Website link: [Facial Recognition with file](https://drichdev.github.io//)
+Website link: [Facial Recognition with file](https://drichdev.github.io/Facial-Reco/)
 
 
 ## 🛠 Features

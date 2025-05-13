@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconnaissance Faciale</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reconnaissance Faciale</h1>
+            <p>Uploader une image et la caméra comparera en temps réel si la personne devant la caméra correspond à l'image.</p>
+            <button id="startCamera" class="btn">Activer la caméra</button>
+        </header>
+
+        <div class="main-content">
+            <div class="video-section">
+                <div class="video-container">
+                    <div class="camera-pending">Cliquez sur "Activer la caméra" pour commencer</div>
+                    <video id="video" width="600" height="450" autoplay muted playsinline></video>
+                    <canvas id="canvas" class="overlay"></canvas>
+                </div>
+                <div class="results">
+                    <div class="score">Score: <span id="score">0</span></div>
+                    <div class="match" id="match">En attente...</div>
+                </div>
+            </div>
+
+            <div class="upload-section">
+                <div id="drop-area" class="drop-area">
+                    <div class="drop-content">
+                        <p>Glissez-déposez une image ici</p>
+                        <p>ou</p>
+                        <input type="file" id="fileInput" accept="image/*">
+                        <label for="fileInput" class="btn">Sélectionner une image</label>
+                    </div>
+                </div>
+                <div class="preview-container">
+                    <img id="preview" src="" alt="Aperçu de l'image uploadée">
+                    <button id="clearImage" class="btn clear-btn">Supprimer l'image</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
